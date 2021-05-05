@@ -10,7 +10,7 @@ class AuthServices {
       String email, String password, String urlSegment) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     final url =
-        'https://identitytoolkit..com/v1/accounts:$urlSegment?key=AIzaSyAfXfk1i37aIwyYwhNLId45b2wAYyiAOhg';
+        'https://identitytoolkit..com/v1/accounts:$urlSegment?key="";
     final response = await http.post(
       url,
       body: json.encode(
@@ -47,7 +47,7 @@ class AuthServices {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     _token = sharedPreferences.getString("token");
     final url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyAfXfk1i37aIwyYwhNLId45b2wAYyiAOhg';
+        'https://identitytoolkit.googleapis.com/v1/accounts:update?key="";
     try {
       await http.post(
         url,
